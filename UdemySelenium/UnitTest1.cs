@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using UdemySelenium.Pages;
 
 namespace UdemySelenium
 {
@@ -25,6 +26,22 @@ namespace UdemySelenium
 
 
             Assert.Pass();
+        }
+
+        [Test]
+        public void LoginTest()
+        {
+            Driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+
+            HomePage homePage = new HomePage();
+            LoginPage loginPage = new LoginPage();
+
+            homePage.ClickLogin();
+
+            loginPage.EnterUserNameAndPassword("admin","password");
+            loginPage.ClickLogin();
+
+            Assert.That(homePage.logOffExists, Is.True, "Log off button not displayed");
         }
 
         [TearDown]
