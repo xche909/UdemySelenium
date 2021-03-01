@@ -3,15 +3,18 @@ using OpenQA.Selenium;
 
 namespace UdemySelenium.Pages
 {
-    public class HomePage : DriverHelper
+    public class HomePage
     {
-        public HomePage()
+        private IWebDriver _driver;
+
+        public HomePage(IWebDriver driver)
         {
+            _driver = driver;
         }
 
-        IWebElement lnkLogin => Driver.FindElement(By.LinkText("Login"));
+        IWebElement lnkLogin => _driver.FindElement(By.LinkText("Login"));
 
-        IWebElement LnkLogOff => Driver.FindElement(By.LinkText("Log off"));
+        IWebElement LnkLogOff => _driver.FindElement(By.LinkText("Log off"));
 
         public void ClickLogin() => lnkLogin.Click();
 

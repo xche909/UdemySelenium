@@ -3,15 +3,18 @@ using OpenQA.Selenium;
 
 namespace UdemySelenium.Pages
 {
-    public class LoginPage : DriverHelper
+    public class LoginPage
     {
-        public LoginPage()
+        private IWebDriver _driver;
+
+        public LoginPage(IWebDriver driver)
         {
+            _driver = driver;
         }
 
-        IWebElement txtUserName => Driver.FindElement(By.Name("UserName"));
-        IWebElement txtPassword => Driver.FindElement(By.Name("Password"));
-        IWebElement btnLogin => Driver.FindElement(By.XPath("//*[@id=\"loginForm\"]/form/div[4]/div/input"));
+        IWebElement txtUserName => _driver.FindElement(By.Name("UserName"));
+        IWebElement txtPassword => _driver.FindElement(By.Name("Password"));
+        IWebElement btnLogin => _driver.FindElement(By.XPath("//*[@id=\"loginForm\"]/form/div[4]/div/input"));
 
         public void ClickLogin() => btnLogin.Click();
 
