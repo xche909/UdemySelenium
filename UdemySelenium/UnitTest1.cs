@@ -26,5 +26,11 @@ namespace UdemySelenium
 
             Assert.Pass();
         }
+
+        [TearDown]
+        public void TearDown() {
+            Driver.Quit();
+        }
+        
     }
 }
