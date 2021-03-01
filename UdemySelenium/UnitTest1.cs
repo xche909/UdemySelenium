@@ -22,7 +22,8 @@ namespace UdemySelenium
 
             string combocControlName = "ContentPlaceHolder1_AllMealsCombo";
             CustomControl.ComboBox(combocControlName, "Almond");
-            
+
+
             Assert.Pass();
         }
     }

@@ -4535,11 +4535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mac/Projects/UdemySelenium/UdemySelenium/UdemySelenium.csproj",
+      "projectUniqueName": "/Users/mac/Documents/GitHub/UdemySelenium/UdemySelenium/UdemySelenium.csproj",
       "projectName": "UdemySelenium",
-      "projectPath": "/Users/mac/Projects/UdemySelenium/UdemySelenium/UdemySelenium.csproj",
+      "projectPath": "/Users/mac/Documents/GitHub/UdemySelenium/UdemySelenium/UdemySelenium.csproj",
       "packagesPath": "/Users/mac/.nuget/packages/",
-      "outputPath": "/Users/mac/Projects/UdemySelenium/UdemySelenium/obj/",
+      "outputPath": "/Users/mac/Documents/GitHub/UdemySelenium/UdemySelenium/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
