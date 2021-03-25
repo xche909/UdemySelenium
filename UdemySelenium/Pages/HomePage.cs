@@ -12,6 +12,7 @@ namespace UdemySelenium.Pages
             _driver = driver;
         }
 
+
         IWebElement lnkLogin => _driver.FindElement(By.LinkText("Login"));
 
         IWebElement LnkLogOff => _driver.FindElement(By.LinkText("Log off"));
